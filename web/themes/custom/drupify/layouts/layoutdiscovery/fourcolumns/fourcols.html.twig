@@ -1,0 +1,14 @@
+<div class="grid grid-cols-4 gap-5 px-10 py-10">
+  {% if content.first %}
+    <div {{ region_attribute.first.addClass('layout__region', 'layout__region--first', 'col-span-1', ' min-h-20') }} class="col-span-4 min-h-20">{{ content.first }}</div>
+  {% endif %}
+  {% if content.second %}
+    <div {{ region_attribute.second.addClass('layout__region', 'layout__region--second', 'col-span-1', ' min-h-20') }} class="col-span-1 min-h-20">{{ content.second }}</div>
+  {% endif %}
+  {% if content.third %}
+    <div {{ region_attribute.third.addClass('layout__region', 'layout__region--third', 'col-span-1', ' min-h-20') }} class="col-span-1 min-h-20">{{ content.third }}</div>
+  {% endif %}
+  {% if content.fourth %}
+    <div {{ region_attribute.fourth.addClass('layout__region', 'layout__region--fourth', 'col-span-1', ' min-h-20') }} class="col-span-1 min-h-20">{{ content.fourth }}</div>
+  {% endif %}
+</div>

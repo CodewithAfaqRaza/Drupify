@@ -1,0 +1,13 @@
+name: Drupify
+type: theme
+'base theme': stable9
+version: 1.0.0
+libraries:
+  - drupify/base
+  - drupify/drupify-main
+  - drupify/alpine
+
+description: 'Custom Drupal theme By Afaq'
+core_version_requirement: ^11
+# adding a logo to the theme
+logo: logo.png

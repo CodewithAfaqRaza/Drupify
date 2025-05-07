@@ -1,0 +1,95 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+/**
+ * Implements hook_preprocess_image_widget().
+ */
+function drupify_preprocess_image_widget(array &$variables): void {
+  $data = &$variables['data'];
+
+  // This prevents image widget templates from rendering preview container HTML
+  // to users that do not have permission to access these previews.
+  // @todo revisit in https://drupal.org/node/953034
+  // @todo revisit in https://drupal.org/node/3114318
+  if (isset($data['preview']['#access']) && $data['preview']['#access'] === FALSE) {
+    unset($data['preview']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function drupify_preprocess_page(&$variables) {
+ 
+  
+  // dump($variables);
+  //  unset($variables['page']['header']['drupify_site_branding']);
+    // unset($variables['page']['header']['drupify_site_branding']);
+
+}
+
+/**
+ * Implements hook_preprocess_node  ().
+ */
+function drupify_preprocess_node(&$variables) {
+
+  // dump($variables);
+  $dayClass = strtolower(date('l'));
+  $variables['attributes']['class'][]= $dayClass;
+  
+  // dump($variables);
+}
+/**
+ * Implements hook_preprocess_form  ().
+ */
+function drupify_preprocess_form(&$variables) {
+  // dump($variables);
+}
+//  these are the hooks that are used to alter forms
+// hook_form_alter
+// hook_form_FORM_ID_alter
+
+/**
+ * Implements hook_preprocess_form_alter  ().
+ */
+function drupify_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) : void {
+  // dump($form); 
+
+  if($form_id == 'user_login_form'){
+     $form['name']['#attributes']['class'][] = 'w-full px-4 py-2 border-2 border-gray-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500';
+     $form['pass']['#attributes']['class'][] = 'w-full px-4 py-2 border-2 border-gray-500 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500';
+     $form['actions']['submit']['#value'] = "Login To Our Website";
+      $form['actions']['submit']['#attributes']['class'][] = 'w-full bg-gray-600 hover:bg-gray-500 text-white font-semibold py-2 px-4 rounded-xl transition duration-300 shadow-md bg-gray-200';
+  }
+}
+/**
+ * Implements hook_theme_suggestions_alter  ().
+ */
+function drupify_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+  // Only proceed if this is a form and the form_id is set.
+  if (isset($variables['element']['#form_id']) && $variables['element']['#form_id'] === 'user_login_form') {
+    $suggestions[] = 'form__drupak_login';
+    $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#form_id']);
+  }
+}
+
+function drupify_preprocess_block__system_branding_block(&$variables) {
+  $frontPage = \Drupal::service('path.matcher')->isFrontPage();
+  $theme = \Drupal::theme()->getActiveTheme();
+  $path = $theme->getPath();
+  // dump($path);
+  if($frontPage){
+    $variables['site_logo'] = "/". $path . '/logo.svg';
+    
+  }else{
+    $variables['site_logo'] = "/". $path . '/logo.png';
+    
+  }
+  // dump($variables['site_logo']);
+
+
+}

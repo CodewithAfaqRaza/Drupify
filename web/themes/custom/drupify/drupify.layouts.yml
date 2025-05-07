@@ -1,0 +1,71 @@
+bricks:
+  label: 'Five Rows And Four Columns'
+  description: 'A layout with five rows and four columns.'
+  template: fiverowsfourcolumn
+  path: 'layouts/layoutdiscovery/bricks'
+  library: drupify/drupify-main
+  category: 'Bricks'
+  default_region: first
+  icon_map:
+    - [first]
+    - [second, third, fourth, fifth]
+    - [sixth]
+    - [seventh, eighth, ninth, tenth]
+    - [eleventh]
+  regions:
+    first:
+      label: 'First'
+      description: 'The first region.'
+    second:
+      label: 'Second'
+      description: 'The second region.'
+    third:
+      label: 'Third'
+      description: 'The third region.'
+    fourth:
+      label: 'Fourth'
+      description: 'The fourth region.'
+    fifth:
+      label: 'Fifth'
+      description: 'The fifth region.'
+    sixth:
+      label: 'Sixth'
+      description: 'The sixth region.'
+    seventh:
+      label: 'Seventh'
+      description: 'The seventh region.'
+    eighth:
+      label: 'Eighth'
+      description: 'The eighth region.'
+    ninth:
+      label: 'Ninth'
+      description: 'The ninth region.'
+    tenth:
+      label: 'Tenth'
+      description: 'The tenth region.'
+    eleventh:
+      label: 'Eleventh'
+      description: 'The eleventh region.'
+
+# fourcolumns:
+#   label: 'Four Columns'
+#   description: 'A layout with four columns.'
+#   template: fourcols
+#   path: 'layouts/layoutdiscovery/fourcolumns'
+#   category: 'Four Columns''
+#   default_region: first
+#   icon_map:
+#     - [first, second, third, fourth]
+#   regions:
+#     first:
+#       label: 'First'
+#       description: 'The first region.'
+#     second:
+#       label: 'Second'
+#       description: 'The second region.'
+#     third:
+#       label: 'Third'
+#       description: 'The third region.'
+#     fourth:
+#       label: 'Fourth'
+#       description: 'The fourth region.'

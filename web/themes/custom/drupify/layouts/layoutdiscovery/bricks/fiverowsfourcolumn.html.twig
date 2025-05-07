@@ -1,0 +1,35 @@
+<div class="grid grid-cols-4 gap-5 px-10 py-10">
+  {% if content.first %}
+    <div {{ region_attribute.first.addClass('layout__region', 'layout__region--first') }} class="col-span-4 min-h-20">{{ content.first }}</div>
+  {% endif %}
+  {% if content.second %}
+    <div {{ region_attribute.second.addClass('layout__region', 'layout__region--second', 'col-span-1', ' min-h-20') }} class="col-span-1 min-h-20">{{ content.second }}</div>
+  {% endif %}
+  {% if content.third %}
+    <div {{ region_attribute.third.addClass('layout__region', 'layout__region--third', 'col-span-1', ' min-h-20') }} class="col-span-1 min-h-20">{{ content.third }}</div>
+  {% endif %}
+  {% if content.fourth %}
+    <div {{ region_attribute.fourth.addClass('layout__region', 'layout__region--fourth', 'col-span-1', ' min-h-20') }} class="col-span-1 min-h-20">{{ content.fourth }}</div>
+  {% endif %}
+  {% if content.fifth %}
+    <div {{ region_attribute.fifth.addClass('layout__region', 'layout__region--fifth', 'col-span-1', ' min-h-20') }} class="col-span-1 min-h-20">{{ content.fifth }}</div>
+  {% endif %}
+  {% if content.sixth %}
+    <div {{ region_attribute.sixth.addClass('layout__region', 'layout__region--sixth', 'col-span-4', ' min-h-20') }} class="col-span-4 min-h-20">{{ content.sixth }}</div>
+  {% endif %}
+  {% if content.seventh %}
+    <div {{ region_attribute.seventh.addClass('layout__region', 'layout__region--seventh', 'col-span-1', ' min-h-20') }} class="col-span-1 min-h-20">{{ content.seventh }}</div>
+  {% endif %}
+  {% if content.eighth %}
+    <div {{ region_attribute.eighth.addClass('layout__region', 'layout__region--eighth', 'col-span-1', ' min-h-20') }} class="col-span-1 min-h-20">{{ content.eighth }}</div>
+  {% endif %}
+  {% if content.ninth %}
+    <div {{ region_attribute.ninth.addClass('layout__region', 'layout__region--ninth', 'col-span-1', ' min-h-20') }} class="col-span-1 min-h-20">{{ content.ninth }}</div>
+  {% endif %}
+  {% if content.tenth %}
+    <div {{ region_attribute.tenth.addClass('layout__region', 'layout__region--tenth', 'col-span-1', ' min-h-20') }} class="col-span-1 min-h-20">{{ content.tenth }}</div>
+  {% endif %}
+  {% if content.eleventh %}
+    <div {{ region_attribute.eleventh.addClass('layout__region', 'layout__region--eleventh') }} class="col-span-4 min-h-20">{{ content.eleventh }}</div>
+  {% endif %}
+</div>
