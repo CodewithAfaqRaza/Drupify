@@ -1,0 +1,5 @@
+name: Drupify Misc Module
+type: module
+description: 'Miscellaneous functions for Drupify.'
+core_version_requirement: ^10 || ^11
+package: Custom

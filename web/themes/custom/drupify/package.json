@@ -8,6 +8,7 @@
     "watch": "postcss ./css/style.css -o ./dist/style.css --watch"
   },
   "devDependencies": {
+    "daisyui": "^5.0.35",
     "postcss": "^8.5.3",
     "postcss-cli": "^11.0.1"
   }
