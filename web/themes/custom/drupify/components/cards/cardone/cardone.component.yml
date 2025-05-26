@@ -1,0 +1,10 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+title: Card One
+description: Card One
+category: Cards
+icon: cardone
+props:
+  title: string
+  description: string
+  image: string
+  link: string

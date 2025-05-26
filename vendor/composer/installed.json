@@ -1506,6 +1506,57 @@
             "install-path": "../../web/modules/contrib/admin_toolbar"
         },
         {
+            "name": "drupal/cl_editorial",
+            "version": "3.0.0-rc2",
+            "version_normalized": "3.0.0.0-RC2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/cl_editorial.git",
+                "reference": "3.0.0-rc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/cl_editorial-3.0.0-rc2.zip",
+                "reference": "3.0.0-rc2",
+                "shasum": "a16bb93b160dfd4881e4f2e05006e23828575fc3"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0-rc2",
+                    "datestamp": "1732559261",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "e0ipso",
+                    "homepage": "https://www.drupal.org/user/550110"
+                },
+                {
+                    "name": "pcambra",
+                    "homepage": "https://www.drupal.org/user/122101"
+                }
+            ],
+            "description": "Provides shared features to aid low-code approaches using Single Directory Components.",
+            "homepage": "https://www.drupal.org/project/cl_editorial",
+            "support": {
+                "source": "https://git.drupalcode.org/project/cl_editorial"
+            },
+            "install-path": "../../web/modules/contrib/cl_editorial"
+        },
+        {
             "name": "drupal/core",
             "version": "11.1.5",
             "version_normalized": "11.1.5.0",
@@ -2179,6 +2230,102 @@
             "install-path": "../../web/modules/contrib/paragraphs"
         },
         {
+            "name": "drupal/sdc_display",
+            "version": "2.0.0-beta1",
+            "version_normalized": "2.0.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/sdc_display.git",
+                "reference": "2.0.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/sdc_display-2.0.0-beta1.zip",
+                "reference": "2.0.0-beta1",
+                "shasum": "096cdbc4b0770587b8494976e6bbf33dc12dffb7"
+            },
+            "require": {
+                "drupal/cl_editorial": "^2.0@rc || ^3.0@rc",
+                "drupal/core": "^10.3 || ^11",
+                "drupal/sdc_tags": "*",
+                "e0ipso/schema-forms": "^v2.5.1",
+                "php": ">=8.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta1",
+                    "datestamp": "1732559906",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Mateu Aguiló Bosch",
+                    "homepage": "https://www.drupal.org/user/550110",
+                    "email": "mateu@mateuaguilo.com"
+                },
+                {
+                    "name": "pcambra",
+                    "homepage": "https://www.drupal.org/user/122101"
+                }
+            ],
+            "description": "Integrates fields with single directory components.",
+            "homepage": "https://www.drupal.org/project/sdc_display",
+            "support": {
+                "source": "https://git.drupalcode.org/project/sdc_display"
+            },
+            "install-path": "../../web/modules/contrib/sdc_display"
+        },
+        {
+            "name": "drupal/sdc_tags",
+            "version": "3.0.0-rc2",
+            "version_normalized": "3.0.0.0-RC2",
+            "require": {
+                "drupal/cl_editorial": "^3",
+                "drupal/core": "^10.3 || ^11"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0-rc2",
+                    "datestamp": "1732559261",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "e0ipso",
+                    "homepage": "https://www.drupal.org/user/550110"
+                },
+                {
+                    "name": "pcambra",
+                    "homepage": "https://www.drupal.org/user/122101"
+                }
+            ],
+            "description": "Allows tagging components so other modules can understand components better.",
+            "homepage": "https://www.drupal.org/project/cl_editorial",
+            "support": {
+                "source": "https://git.drupalcode.org/project/cl_editorial"
+            },
+            "install-path": null
+        },
+        {
             "name": "drupal/twig_vardumper",
             "version": "3.2.0",
             "version_normalized": "3.2.0.0",
@@ -2504,6 +2651,117 @@
                 }
             ],
             "install-path": "../drush/drush"
+        },
+        {
+            "name": "e0ipso/schema-forms",
+            "version": "v2.5.1",
+            "version_normalized": "2.5.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/e0ipso/schema-forms-php.git",
+                "reference": "0e9936bbdb02174c3301455fca52891cf1ef32ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/e0ipso/schema-forms-php/zipball/0e9936bbdb02174c3301455fca52891cf1ef32ce",
+                "reference": "0e9936bbdb02174c3301455fca52891cf1ef32ce",
+                "shasum": ""
+            },
+            "require": {
+                "e0ipso/shaper": "^1.2",
+                "ext-json": "*",
+                "justinrainbow/json-schema": "^5.2",
+                "php": ">=7.4",
+                "symfony/polyfill-php81": "^1.26"
+            },
+            "require-dev": {
+                "drupal/coder": "^8.3",
+                "drupal/core-dev": "^9.4",
+                "drupal/core-recommended": "^9.4",
+                "enlightn/security-checker": "^1.7",
+                "ergebnis/composer-normalize": "^2.28",
+                "nikic/php-parser": "^4.10",
+                "php-parallel-lint/php-parallel-lint": "^1.3",
+                "phpro/grumphp-shim": "^1.13",
+                "phpunit/phpunit": "^9.5",
+                "povils/phpmnd": "^2.4",
+                "sebastian/phpcpd": "^6.0",
+                "squizlabs/php_codesniffer": "^3.6"
+            },
+            "time": "2022-09-16T15:32:18+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "SchemaForms\\": "src",
+                    "SchemaForms\\Tests\\": "tests/src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Mateu Aguiló Bosch",
+                    "email": "mateu@mateuaguilo.com"
+                }
+            ],
+            "description": "Creates form definitions from JSON Schema property definitions and display configuration.",
+            "support": {
+                "issues": "https://github.com/e0ipso/schema-forms-php/issues",
+                "source": "https://github.com/e0ipso/schema-forms-php/tree/v2.5.1"
+            },
+            "install-path": "../e0ipso/schema-forms"
+        },
+        {
+            "name": "e0ipso/shaper",
+            "version": "1.2.7",
+            "version_normalized": "1.2.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/e0ipso/shaper.git",
+                "reference": "1d9e726c98d3168d30c1180cd836d13267744fb7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/e0ipso/shaper/zipball/1d9e726c98d3168d30c1180cd836d13267744fb7",
+                "reference": "1d9e726c98d3168d30c1180cd836d13267744fb7",
+                "shasum": ""
+            },
+            "require": {
+                "justinrainbow/json-schema": "^5.2 || ^6.3"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.4",
+                "phpunit/phpcov": "^8.2",
+                "phpunit/phpunit": "^9.5"
+            },
+            "time": "2025-04-04T08:14:01+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Shaper\\": "src",
+                    "Shaper\\Tests\\": "tests/src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Mateu Aguiló Bosch",
+                    "email": "mateu.aguilo.bosch@gmail.com"
+                }
+            ],
+            "description": "Lightweight library to handle in and out transformations in PHP.",
+            "support": {
+                "issues": "https://github.com/e0ipso/shaper/issues",
+                "source": "https://github.com/e0ipso/shaper/tree/1.2.7"
+            },
+            "install-path": "../e0ipso/shaper"
         },
         {
             "name": "egulias/email-validator",
@@ -3230,6 +3488,74 @@
                 "source": "https://github.com/laravel/framework"
             },
             "install-path": "../illuminate/macroable"
+        },
+        {
+            "name": "justinrainbow/json-schema",
+            "version": "5.3.0",
+            "version_normalized": "5.3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jsonrainbow/json-schema.git",
+                "reference": "feb2ca6dd1cebdaf1ed60a4c8de2e53ce11c4fd8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/feb2ca6dd1cebdaf1ed60a4c8de2e53ce11c4fd8",
+                "reference": "feb2ca6dd1cebdaf1ed60a4c8de2e53ce11c4fd8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~2.2.20||~2.15.1",
+                "json-schema/json-schema-test-suite": "1.2.0",
+                "phpunit/phpunit": "^4.8.35"
+            },
+            "time": "2024-07-06T21:00:26+00:00",
+            "bin": [
+                "bin/validate-json"
+            ],
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "JsonSchema\\": "src/JsonSchema/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bruno Prieto Reis",
+                    "email": "bruno.p.reis@gmail.com"
+                },
+                {
+                    "name": "Justin Rainbow",
+                    "email": "justin.rainbow@gmail.com"
+                },
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch"
+                },
+                {
+                    "name": "Robert Schönthal",
+                    "email": "seroscho@googlemail.com"
+                }
+            ],
+            "description": "A library to validate a json schema.",
+            "homepage": "https://github.com/justinrainbow/json-schema",
+            "keywords": [
+                "json",
+                "schema"
+            ],
+            "support": {
+                "issues": "https://github.com/jsonrainbow/json-schema/issues",
+                "source": "https://github.com/jsonrainbow/json-schema/tree/5.3.0"
+            },
+            "install-path": "../justinrainbow/json-schema"
         },
         {
             "name": "laravel/prompts",
